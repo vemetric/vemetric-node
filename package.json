@@ -2,9 +2,9 @@
   "name": "@vemetric/node",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Vemetric/vemetric-js.git"
+    "url": "https://github.com/Vemetric/vemetric-node.git"
   },
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "The Vemetric SDK for Node.js, Bun, Deno",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
