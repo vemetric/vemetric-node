@@ -13,6 +13,8 @@ const DEFAULT_OPTIONS: Options = {
 function getBasicRequestHeaders(token: string) {
   return {
     Token: token,
+    'V-SDK': 'node',
+    'V-SDK-Version': '%VEMETRIC_SDK_VERSION%',
   };
 }
 

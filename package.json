@@ -5,18 +5,25 @@
     "url": "https://github.com/Vemetric/vemetric-node.git"
   },
   "homepage": "https://vemetric.com/docs/sdks/nodejs",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "The Vemetric SDK for Node.js, Bun, Deno",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
     "prepublish": "pnpm run build",
-    "build": "tsup",
+    "build": "tsup && node after-build.mjs",
     "dev": "npm run build -- --watch",
     "lint": "eslint --max-warnings=0 --ext .js,.jsx,.ts,.tsx . --fix"
   },
-  "keywords": ["typescript", "sdk", "node-js", "bun", "deno", "vemetric"],
+  "keywords": [
+    "typescript",
+    "sdk",
+    "node-js",
+    "bun",
+    "deno",
+    "vemetric"
+  ],
   "author": "Vemetric",
   "license": "MIT",
   "devDependencies": {
