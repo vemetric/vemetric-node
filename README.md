@@ -1,4 +1,4 @@
-![CleanShot 2025-05-05 at 14 55 03@2x](https://github.com/user-attachments/assets/78ba6b99-cc66-4e92-bc03-714cff3e2389)
+![Vemetric Node SDK](https://github.com/user-attachments/assets/846a7c6b-206b-4c85-bfbd-c4a7c3cb6a3a)
 
 # The Vemetric SDK for Node.js, Bun and Deno
 
