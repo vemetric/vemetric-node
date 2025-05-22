@@ -113,7 +113,7 @@ export class Vemetric {
     try {
       const payload = {
         userIdentifier,
-        ...userData,
+        data: userData,
       };
 
       const headers = getBasicRequestHeaders(this.options.token);
