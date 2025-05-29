@@ -6,6 +6,8 @@ Learn more about the Vemetric Node.js SDK in the [official docs](https://vemetri
 
 You can also checkout the [NPM Package](https://www.npmjs.com/package/@vemetric/node).
 
+[![NPM Version](https://img.shields.io/npm/v/%40vemetric%2Fnode)](https://www.npmjs.com/package/@vemetric/node)
+
 ## Installation
 
 ```bash
