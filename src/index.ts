@@ -77,10 +77,7 @@ export class Vemetric {
       );
 
       req.on('error', (e) => {
-        console.error('Error sending request', e);
-        reject({
-          statusText: 'Unknown error',
-        });
+        reject(e);
       });
 
       req.write(data);
