@@ -25,7 +25,7 @@ describe('Vemetric', () => {
     mockWriteData = '';
 
     // Setup mock implementation
-    (https.request as ReturnType<typeof vi.fn>).mockImplementation((url, options, callback) => {
+    (https.request as ReturnType<typeof vi.fn>).mockImplementation((_url, _options, callback) => {
       // Create a mock request object with all necessary methods
       const mockRequest = {
         on: vi.fn(),
@@ -95,7 +95,7 @@ describe('Vemetric', () => {
 
     it('should handle request errors gracefully', async () => {
       // Mock request error
-      (https.request as ReturnType<typeof vi.fn>).mockImplementation((url, options, callback) => {
+      (https.request as ReturnType<typeof vi.fn>).mockImplementation(() => {
         const mockRequest = {
           on: vi.fn().mockImplementation((event: string, handler: (error: Error) => void) => {
             if (event === 'error') {
