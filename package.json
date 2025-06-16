@@ -2,7 +2,7 @@
   "name": "@vemetric/node",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Vemetric/vemetric-node.git"
+    "url": "https://github.com/vemetric/vemetric-node.git"
   },
   "homepage": "https://vemetric.com/docs/sdks/nodejs",
   "version": "0.1.2",
