@@ -26,6 +26,7 @@ const vemetric = new Vemetric({
 // Track an event
 await vemetric.trackEvent('MyCustomEvent', {
   userIdentifier: 'user-id',
+  userDisplayName: 'John Doe',
   eventData: { key: 'value' },
 });
 

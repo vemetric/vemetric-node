@@ -55,6 +55,7 @@ describe('Vemetric', () => {
     it('should send correct request with event data', async () => {
       const eventName = 'test_event';
       const userIdentifier = 'user123';
+      const userDisplayName = 'John Doe';
       const eventData = { test: 'data' };
       const userData = {
         set: { name: 'Test User' },
@@ -64,6 +65,7 @@ describe('Vemetric', () => {
 
       await vemetric.trackEvent(eventName, {
         userIdentifier,
+        userDisplayName,
         eventData,
         userData,
       });
@@ -88,6 +90,7 @@ describe('Vemetric', () => {
       expect(payload).toEqual({
         name: eventName,
         userIdentifier,
+        displayName: userDisplayName,
         customData: eventData,
         userData,
       });

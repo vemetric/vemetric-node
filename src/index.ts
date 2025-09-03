@@ -26,6 +26,7 @@ type UserDataProps = {
 
 type EventProps = {
   userIdentifier: string;
+  userDisplayName?: string;
   eventData?: Record<string, unknown>;
   userData?: UserDataProps;
 };
@@ -85,7 +86,7 @@ export class Vemetric {
     });
   }
 
-  async trackEvent(eventName: string, { eventData, userIdentifier, userData }: EventProps) {
+  async trackEvent(eventName: string, { eventData, userIdentifier, userDisplayName, userData }: EventProps) {
     try {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const payload: any = {
@@ -94,6 +95,9 @@ export class Vemetric {
       };
       if (eventData) {
         payload.customData = eventData;
+      }
+      if (userDisplayName) {
+        payload.displayName = userDisplayName;
       }
       if (userData) {
         payload.userData = userData;
