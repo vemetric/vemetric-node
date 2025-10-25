@@ -26,7 +26,7 @@
     "deno",
     "vemetric"
   ],
-  "author": "Vemetric",
+  "author": "Vemetric <info@vemetric.com> (https://vemetric.com/)",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.12.13",
