@@ -33,7 +33,9 @@ type EventProps = {
 
 type UserUpdateProps = {
   userIdentifier: string;
-  userData: UserDataProps;
+  userDisplayName?: string;
+  userAvatarUrl?: string;
+  userData?: UserDataProps;
 };
 
 export class Vemetric {
@@ -110,10 +112,12 @@ export class Vemetric {
     }
   }
 
-  async updateUser({ userIdentifier, userData }: UserUpdateProps) {
+  async updateUser({ userIdentifier, userDisplayName, userAvatarUrl, userData }: UserUpdateProps) {
     try {
       const payload = {
         userIdentifier,
+        displayName: userDisplayName,
+        avatarUrl: userAvatarUrl,
         data: userData,
       };
 
