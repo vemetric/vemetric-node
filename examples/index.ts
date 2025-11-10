@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 import { Vemetric } from '../src';
 
 const vemetricClient = new Vemetric({ token: 'o1rySsGlUtFCyflo', host: 'http://localhost:4004' });
