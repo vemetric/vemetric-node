@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import https from 'https';
 import { Vemetric } from '../src/index';
+import { version } from '../package.json';
 
 // Mock the https module
 vi.mock('https', () => {
@@ -79,7 +80,7 @@ describe('Vemetric', () => {
             'Content-Type': 'application/json',
             Token: mockToken,
             'V-SDK': 'node',
-            'V-SDK-Version': '%VEMETRIC_SDK_VERSION%',
+            'V-SDK-Version': version,
           }),
         }),
         expect.any(Function),
@@ -151,7 +152,7 @@ describe('Vemetric', () => {
             'Content-Type': 'application/json',
             Token: mockToken,
             'V-SDK': 'node',
-            'V-SDK-Version': '%VEMETRIC_SDK_VERSION%',
+            'V-SDK-Version': version,
           }),
         }),
         expect.any(Function),

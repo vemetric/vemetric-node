@@ -1,0 +1,6 @@
+overrides:
+  # optional peer of vite, not used by this project; pin to a patched version
+  esbuild: ^0.28.1
+
+ignoredBuiltDependencies:
+  - esbuild
