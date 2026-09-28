@@ -5,7 +5,7 @@
     "url": "git+https://github.com/vemetric/vemetric-node.git"
   },
   "homepage": "https://vemetric.com/docs/sdks/nodejs",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Official Node.js, Bun, Deno SDK for Vemetric",
   "type": "module",
   "main": "./dist/index.cjs",
