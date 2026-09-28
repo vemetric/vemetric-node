@@ -12,18 +12,28 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
 
-      - name: Install PNPM
-        uses: pnpm/action-setup@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
         with:
-          version: 9.1.3
+          node-version: 24
+          cache: pnpm
 
       - name: Install dependencies
-        run: pnpm i
+        run: pnpm install --frozen-lockfile
+
+      - name: Format
+        run: pnpm format:check
 
       - name: Lint
         run: pnpm lint
+
+      - name: Typecheck
+        run: pnpm typecheck
 
       - name: Test
         run: pnpm test

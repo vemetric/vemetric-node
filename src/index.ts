@@ -1,4 +1,5 @@
 import https from 'https';
+import pkg from '../package.json' with { type: 'json' };
 
 export type Options = {
   token: string;
@@ -14,7 +15,7 @@ function getBasicRequestHeaders(token: string) {
   return {
     Token: token,
     'V-SDK': 'node',
-    'V-SDK-Version': '%VEMETRIC_SDK_VERSION%',
+    'V-SDK-Version': pkg.version,
   };
 }
 
