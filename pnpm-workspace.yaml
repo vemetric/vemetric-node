@@ -1,6 +1,8 @@
 overrides:
   # optional peer of vite, not used by this project; pin to a patched version
   esbuild: ^0.28.1
+  # transitive dep of vite (via postcss); pin to a patched version
+  source-map-js: ^1.2.2
 
 ignoredBuiltDependencies:
   - esbuild
